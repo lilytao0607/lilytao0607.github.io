@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import taichiLogo from '../../assets/image/taichi-logo.png';
-import bgMeditation from '../../assets/image/tai-chi-meditation.jpg';
-import { withBase } from '../../lib/paths';
+import photoTaoli from '../../assets/image/tai-chi-taoli.jpg';
+import { withBase, localizedPath } from '../../lib/paths';
 ---
 
 <BaseLayout title="关于我 - 陶莉 | 荷兰杨氏太极拳传承人">
@@ -41,18 +41,18 @@ import { withBase } from '../../lib/paths';
         <!-- 左侧图片 -->
         <div class="scroll-animate">
           <div class="relative">
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-mist/30">
               <Image
-                src={bgMeditation}
-                alt="太极冥想"
-                class="w-full h-full object-cover"
+                src={photoTaoli}
+                alt="陶莉"
+                class="w-full h-full object-contain"
                 format="jpg"
               />
             </div>
             <!-- 装饰卡片 -->
-            <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
-              <p class="text-4xl font-serif text-accent font-bold">18+</p>
-              <p class="text-sm text-secondary">年持续学习</p>
+            <div class="absolute bottom-4 right-4 bg-paper border-2 border-accent/30 rounded-xl p-4 shadow-lg">
+              <p class="text-3xl font-serif text-accent font-bold">18+</p>
+              <p class="text-xs text-secondary">年持续学习</p>
             </div>
           </div>
         </div>
@@ -511,13 +511,13 @@ import { withBase } from '../../lib/paths';
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
-          href={withBase("/courses")}
+          href={localizedPath("/courses", "zh")}
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
           查看课程
         </a>
         <a
-          href={withBase("/movements")}
+          href={localizedPath("/movements", "zh")}
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
           了解招式

@@ -49,6 +49,24 @@ const quoteCards = {
       quote: 'Beweging en rust zijn één oorsprong',
       source: 'Zhou Dunyi - Taiji Diagram Uitleg',
     },
+    {
+      char: '道',
+      color: 'accent',
+      quote: 'De Tao die kan worden uitgedrukt is niet de eeuwige Tao',
+      source: 'Laozi - Dao De Jing',
+    },
+    {
+      char: '静',
+      color: 'cyan',
+      quote: 'Natuur is traag maar overwint alles',
+      source: 'Laozi - Dao De Jing',
+    },
+    {
+      char: '悟',
+      color: 'secondary',
+      quote: 'Wie anderen kent, is wijs. Wie zichzelf kent, is verlicht',
+      source: 'Laozi - Dao De Jing',
+    },
   ],
   en: [
     {
@@ -69,13 +87,31 @@ const quoteCards = {
       quote: 'Movement and stillness are one source',
       source: 'Zhou Dunyi - Taiji Diagram Explanation',
     },
+    {
+      char: 'Tao',
+      color: 'accent',
+      quote: 'The Tao that can be told is not the eternal Tao',
+      source: 'Laozi - Tao Te Ching',
+    },
+    {
+      char: 'Still',
+      color: 'cyan',
+      quote: 'Nature is slow but overtakes everything',
+      source: 'Laozi - Tao Te Ching',
+    },
+    {
+      char: 'Wisdom',
+      color: 'secondary',
+      quote: 'Those who know others are wise. Those who know themselves are enlightened',
+      source: 'Laozi - Tao Te Ching',
+    },
   ],
   zh: [
     {
       char: '水',
       color: 'accent',
       quote: '上善若水，水善利万物而不争',
-      source: '—— 老子《道德经》',
+      source: '—— 老子《道德经》第八章',
     },
     {
       char: '易',
@@ -88,6 +124,24 @@ const quoteCards = {
       color: 'secondary',
       quote: '动静一源，显微无间',
       source: '—— 周敦颐《太极图说》',
+    },
+    {
+      char: '道',
+      color: 'accent',
+      quote: '道可道，非常道；名可名，非常名',
+      source: '—— 老子《道德经》第一章',
+    },
+    {
+      char: '静',
+      color: 'cyan',
+      quote: '静胜躁，寒胜热。清静为天下正',
+      source: '—— 老子《道德经》第四十五章',
+    },
+    {
+      char: '悟',
+      color: 'secondary',
+      quote: '知人者智，自知者明',
+      source: '—— 老子《道德经》第三十三章',
     },
   ],
 };
@@ -172,9 +226,9 @@ const quoteCards = {
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {quoteCards[currentLocale].map((card, index) => (
-          <div class="scroll-animate group relative h-full" style={`animation-delay: ${index * 0.2}s`}>
+          <div class="scroll-animate group relative h-full" style={`animation-delay: ${index * 0.15}s`}>
             <div class="relative bg-paper rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-border/30 hover:border-accent/50 overflow-hidden h-full flex flex-col">
               <div class="absolute top-6 right-6 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
                 <span class="text-accent text-2xl font-serif">{card.char}</span>
@@ -188,7 +242,7 @@ const quoteCards = {
                 </p>
                 <footer class="flex items-center space-x-3">
                   <div class="w-12 h-0.5 bg-accent/50"></div>
-                  <cite class="text-secondary not-italic font-medium">— {card.source}</cite>
+                  <cite class="text-secondary not-italic font-medium text-sm">— {card.source}</cite>
                 </footer>
               </blockquote>
 

@@ -5,10 +5,12 @@ import taichiLogo from '../assets/image/taichi-logo.png';
 import bgMeditation from '../assets/image/tai-chi-meditation.jpg';
 import bgNature from '../assets/image/tai-chi-nature.jpg';
 import bgGroup from '../assets/image/tai-chi-group.jpg';
-import { withBase } from '../lib/paths';
+import { withBase, localizedPath } from '../lib/paths';
+
+const currentLocale = 'nl' as const;
 ---
 
-<BaseLayout title="Over Tai Chi - Eeuwenoude wijsheid ontdekken">
+<BaseLayout>
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
     <!-- Achtergrond decoratie -->
@@ -1096,16 +1098,16 @@ import { withBase } from '../lib/paths';
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
-          href={withBase("/courses")}
+          href={localizedPath('/me', currentLocale)}
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          Bekijk cursussen
+          Over Mij
         </a>
         <a
-          href={withBase("/movements")}
+          href={localizedPath('/courses', currentLocale)}
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
-          Ontdek bewegingen
+          Bekijk cursussen
         </a>
       </div>
     </div>
