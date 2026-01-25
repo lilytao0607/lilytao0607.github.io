@@ -1,0 +1,10 @@
+---
+import MovementsPage from '../../views/movements/MovementsPage.astro';
+import { getLocalePaths, type Locale } from '@/lib/locales';
+
+export const getStaticPaths = getLocalePaths;
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+---
+<MovementsPage locale={locale} />

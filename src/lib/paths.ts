@@ -41,14 +41,9 @@ export function withBase(path: string): string {
  * @returns Full localized path with base prefix
  */
 export function localizedPath(path: string, locale: string): string {
-  // For default locale (nl), don't add prefix
-  if (locale === 'nl') {
-    return withBase(path);
-  }
-
   // Remove leading slash from path if present
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  // Add locale prefix with slash
+  // Add locale prefix with slash (all locales require prefix)
   return withBase(`/${locale}/${cleanPath}`);
 }
 
@@ -94,12 +89,7 @@ export function parsePath(fullPath: string): { basePath: string; pathWithoutLoca
 export function buildPath(pathWithoutLocale: string, locale: string): string {
   const base = getBasePath();
 
-  // For default locale (nl), don't add locale prefix
-  if (locale === 'nl') {
-    return base === '/' ? pathWithoutLocale : `${base.slice(0, -1)}${pathWithoutLocale}`;
-  }
-
-  // Add locale prefix
+  // Add locale prefix (all locales require prefix)
   const cleanPath = pathWithoutLocale.startsWith('/') ? pathWithoutLocale : `/${pathWithoutLocale}`;
   if (base === '/') {
     return `/${locale}${cleanPath}`;

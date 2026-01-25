@@ -1,17 +1,17 @@
 ---
 import LanguageSwitcher from '../ui/LanguageSwitcher.vue';
-import { translations } from '../../lib/i18n';
+import { getTranslations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
-const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
-const t = translations[currentLocale];
+interface Props {
+  locale?: 'nl' | 'en' | 'zh';
+}
 
-// 网站名称翻译
-const siteNames = {
-  nl: 'Yang Style Tai Chi * Lily Tao',
-  en: 'Yang Style Tai Chi * Lily Tao',
-  zh: '杨氏太极 * 陶莉',
-};
+const { locale = 'nl' } = Astro.props;
+const currentLocale = locale;
+
+// 获取全局翻译（导航等）
+const t = getTranslations('global', currentLocale);
 
 const navigation = [
   { name: t.nav.home, href: localizedPath('/', currentLocale) },
@@ -23,7 +23,7 @@ const navigation = [
 ];
 
 // 按钮标签翻译
-const buttonLabels = {
+const buttonLabels: Record<string, { menu: string; logo: string }> = {
   nl: { menu: 'Open menu', logo: 'Tai Chi Cultuur' },
   en: { menu: 'Open menu', logo: 'Tai Chi Culture' },
   zh: { menu: '打开菜单', logo: '太极文化' },
@@ -47,7 +47,7 @@ const labels = buttonLabels[currentLocale];
         <span
           class="text-xl font-serif font-bold text-ink group-hover:text-accent transition-colors"
         >
-          {siteNames[currentLocale]}
+          {t.siteName}
         </span>
       </a>
 
@@ -140,7 +140,7 @@ const labels = buttonLabels[currentLocale];
   }
 </style>
 
-<script define:vars={{ currentLocale: Astro.currentLocale || 'nl' }}>
+<script define:vars={{ currentLocale }}>
   // 移动端菜单切换 - 使用事件委托确保在View Transitions后仍然工作
   document.addEventListener('click', (e) => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');

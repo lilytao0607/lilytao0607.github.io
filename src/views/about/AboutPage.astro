@@ -1,0 +1,438 @@
+---
+/**
+ * AboutPage - 共享的关于太极页面组件
+ * @param locale - 语言代码 ('nl' | 'en' | 'zh')
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../lib/i18n';
+import { localizedPath } from '../../lib/paths';
+
+interface Props {
+  locale: 'nl' | 'en' | 'zh';
+}
+
+const { locale } = Astro.props;
+const currentLocale = locale;
+const t = getTranslations('about', currentLocale);
+const gt = getTranslations('global', currentLocale);
+const coursesT = getTranslations('courses', currentLocale);
+
+// 罗马数字映射
+const romanNumerals = ['I', 'II', 'III', 'IV'];
+---
+
+<BaseLayout page="about" locale={currentLocale}>
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-mist/50 via-paper to-mist/30"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-cyan/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="animate-fade-in">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
+          {t.hero.tag}
+        </span>
+        <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
+          {t.hero.title}
+        </h1>
+        <p class="text-xl text-secondary max-w-3xl mx-auto">
+          {t.hero.subtitle}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origin and History -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left image -->
+        <div class="scroll-animate">
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/image/tai-chi-meditation.jpg"
+                alt="Tai Chi meditation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Decorative border -->
+            <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
+              <p class="text-4xl font-serif text-accent font-bold">{t.history.badge.years}</p>
+              <p class="text-sm text-secondary">{t.history.badge.text}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right content -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+              {t.history.tag}
+            </span>
+            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+              {t.history.title}
+            </h2>
+            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+          </div>
+
+          <div class="space-y-6 text-secondary text-lg">
+            <p class="leading-relaxed" set:html={t.history.p1} />
+            <p class="leading-relaxed" set:html={t.history.p2} />
+            <p class="leading-relaxed" set:html={t.history.p3} />
+          </div>
+
+          <!-- Keyword tags -->
+          <div class="flex flex-wrap gap-3 mt-8">
+            {t.history.tags.map((tag) => (
+              <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Philosophy -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          {t.philosophy.tag}
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          {t.philosophy.title}
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-2xl mx-auto">
+          {t.philosophy.subtitle}
+        </p>
+      </div>
+
+      <!-- Philosophy card grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {t.philosophy.cards.map((card, index) => (
+          <div class="scroll-animate group h-full flex flex-col" style={`animation-delay: ${index * 0.1}s`}>
+            <div class={`bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-${card.color}/50 h-full flex flex-col`}>
+              <div class={`w-16 h-16 bg-${card.color}/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-${card.color}/20 transition-colors`}>
+                <span class="text-3xl">{card.emoji}</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                {card.title}
+              </h3>
+              <p class="text-secondary leading-relaxed">
+                {card.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Characteristics -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left content -->
+        <div class="scroll-animate">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+              {t.characteristics.tag}
+            </span>
+            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+              {t.characteristics.title}
+            </h2>
+            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+          </div>
+
+          <!-- Feature list -->
+          <div class="space-y-8">
+            {t.characteristics.items.map((item) => (
+              <div class="flex items-start space-x-4">
+                <div class={`w-12 h-12 bg-${item.color}/10 rounded-full flex items-center justify-center flex-shrink-0`}>
+                  <span class={`text-xl text-${item.color}`}>{item.num}</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-ink mb-2">
+                    {item.title}
+                  </h3>
+                  <p class="text-secondary">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right image -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="relative">
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/image/tai-chi-nature.jpg"
+                alt="Tai Chi in nature"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Tai Chi logo decoration -->
+            <div class="absolute -top-6 -right-6 w-32 h-32 bg-paper border-2 border-accent/30 rounded-full p-3 shadow-lg flex items-center justify-center">
+              <img
+                src="/image/taichi-logo.png"
+                alt="Tai Chi"
+                class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Application -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left content -->
+        <div class="scroll-animate order-2 lg:order-1">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+              {t.modern.tag}
+            </span>
+            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+              {t.modern.title}
+            </h2>
+            <div class="w-20 h-1 bg-cyan/50 mb-8"></div>
+          </div>
+
+          <div class="space-y-6 text-secondary text-lg">
+            <p class="leading-relaxed" set:html={t.modern.p1} />
+            <p class="leading-relaxed" set:html={t.modern.p2} />
+            <p class="leading-relaxed" set:html={t.modern.p3} />
+          </div>
+
+          <!-- Benefits list -->
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            {t.modern.benefits.map((benefit) => (
+              <div class="flex items-center space-x-3">
+                <div class={`w-2 h-2 rounded-full bg-${benefit.color}`}></div>
+                <span class="text-ink font-medium">{benefit.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right image -->
+        <div class="scroll-animate order-1 lg:order-2">
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/image/tai-chi-group.jpg"
+                alt="Tai Chi group practice"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Decorative card -->
+            <div class="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
+              <p class="text-3xl md:text-4xl font-serif text-accent font-bold mb-2">{t.modern.badge.title}</p>
+              <p class="text-sm md:text-base text-secondary">{t.modern.badge.subtitle}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Methods -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          {t.practice.tag}
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          {t.practice.title}
+        </h2>
+        <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-2xl mx-auto">
+          {t.practice.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Left: Core essentials -->
+        <div class="space-y-6">
+          {t.practice.essentials.map((essential, index) => (
+            <div class="scroll-animate" style={`animation-delay: ${index * 0.1}s`}>
+              <div class={`bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-${essential.color}/50 transition-all duration-300`}>
+                <div class="flex items-start space-x-6">
+                  <div class={`w-16 h-16 bg-${essential.color}/10 rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <span class={`text-2xl font-serif text-${essential.color} font-bold`}>{essential.num}</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-serif font-bold text-ink mb-3">
+                      {essential.title}
+                    </h3>
+                    <p class="text-secondary leading-relaxed">
+                      {essential.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Right: Practice recommendations -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
+            <div class="mb-8">
+              <h3 class="text-3xl font-serif font-bold text-ink mb-4">
+                {t.practice.recommendations.title}
+              </h3>
+              <div class="w-16 h-1 bg-accent/50"></div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Frequency -->
+              <div class="border-b border-border/30 pb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                  <span class="text-2xl">{t.practice.recommendations.frequency.emoji}</span>
+                  <h4 class="text-xl font-serif font-bold text-ink">{t.practice.recommendations.frequency.title}</h4>
+                </div>
+                <p class="text-secondary leading-relaxed">
+                  {t.practice.recommendations.frequency.desc}
+                </p>
+              </div>
+
+              <!-- Time -->
+              <div class="border-b border-border/30 pb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                  <span class="text-2xl">{t.practice.recommendations.time.emoji}</span>
+                  <h4 class="text-xl font-serif font-bold text-ink">{t.practice.recommendations.time.title}</h4>
+                </div>
+                <p class="text-secondary leading-relaxed">
+                  {t.practice.recommendations.time.desc}
+                </p>
+              </div>
+
+              <!-- Location -->
+              <div class="border-b border-border/30 pb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                  <span class="text-2xl">{t.practice.recommendations.location.emoji}</span>
+                  <h4 class="text-xl font-serif font-bold text-ink">{t.practice.recommendations.location.title}</h4>
+                </div>
+                <p class="text-secondary leading-relaxed">
+                  {t.practice.recommendations.location.desc}
+                </p>
+              </div>
+
+              <!-- Precautions -->
+              <div>
+                <div class="flex items-center space-x-3 mb-3">
+                  <span class="text-2xl">{t.practice.recommendations.precautions.emoji}</span>
+                  <h4 class="text-xl font-serif font-bold text-ink">{t.practice.recommendations.precautions.title}</h4>
+                </div>
+                <ul class="space-y-2 text-secondary">
+                  {t.practice.recommendations.precautions.items.map((item) => (
+                    <li class="flex items-start space-x-2">
+                      <span class="text-accent mt-1">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+        {t.cta.title}
+      </h2>
+      <p class="text-xl text-secondary mb-12">
+        {t.cta.subtitle}
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a
+          href={localizedPath('/me', currentLocale)}
+          class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          {t.cta.meButton}
+        </a>
+        <a
+          href={localizedPath('/courses', currentLocale)}
+          class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
+        >
+          {t.cta.coursesButton}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Scroll-triggered animation
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('astro:page-load', () => {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  });
+
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+  animatedElements.forEach((el) => observer.observe(el));
+</script>
+
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+</style>

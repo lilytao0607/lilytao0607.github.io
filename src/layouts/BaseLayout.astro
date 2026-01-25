@@ -3,54 +3,84 @@ import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import FloatingCTA from '../components/ui/FloatingCTA.astro';
+import { getTranslations } from '../lib/i18n';
 import '../styles/global.css';
-import { withBase } from '../lib/paths';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
+  locale?: string;
+  page?: 'home' | 'about' | 'me' | 'courses' | 'movements' | 'blog'; // 页面类型
 }
 
 const {
-  title = '杨氏太极 * 陶莉',
-  description = '探索太极哲学、武术和健康养生的传统智慧'
+  title,
+  description,
+  locale = 'nl',
+  page = 'home' // 默认是首页
 } = Astro.props;
+
+const currentLocale = locale as 'nl' | 'en' | 'zh';
+
+// 获取指定页面的翻译（用于 SEO 元数据）
+const pageT = getTranslations(page, currentLocale);
+
+// 默认标题（如果未提供）
+// 优先使用: 1. 提供的 title, 2. seoTitle (如果有), 3. title (页面内标题), 4. 默认值
+const pageTitle = title || (() => {
+  if ('seoTitle' in pageT && typeof pageT.seoTitle === 'string') return pageT.seoTitle;
+  if ('title' in pageT && typeof pageT.title === 'string') return pageT.title;
+  return 'Yang Style Tai Chi * Lily Tao';
+})();
+
+// 默认描述（如果未提供，使用指定页面的 description）
+const pageDescription = description || (() => {
+  if (typeof pageT.description === 'string') return pageT.description;
+  return 'Explore the ancient wisdom of Tai Chi - Harmony of body and mind';
+})();
+
+// 语言代码映射（用于 HTML lang 属性）
+const localeLangMap: Record<string, string> = {
+  nl: 'nl',
+  en: 'en',
+  zh: 'zh-CN',
+};
+
+const htmlLang = localeLangMap[currentLocale] || 'en';
 ---
 
 <!doctype html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang={htmlLang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content={pageDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon - Tai Chi Logo -->
-    <link rel="icon" type="image/png" sizes="32x32" href={withBase("/favicon-32x32.png")} />
-    <link rel="icon" type="image/png" sizes="16x16" href={withBase("/favicon-16x16.png")} />
-    <link rel="apple-touch-icon" sizes="180x180" href={withBase("/apple-touch-icon.png")} />
-    <link rel="icon" href={withBase("/favicon.png")} />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.png" />
 
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Google Fonts - Noto Serif TC & Noto Sans TC -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet" />
 
-    <title>{title}</title>
+    <title>{pageTitle}</title>
 
     <!-- View Transitions for SPA-like navigation -->
     <ViewTransitions />
   </head>
 
-  <body
-    class="bg-paper text-primary transition-colors duration-500"
-  >
-    <Header />
+  <body class="bg-paper text-primary transition-colors duration-500">
+    <Header locale={currentLocale} />
     <main class="min-h-screen">
       <slot />
     </main>
-    <Footer />
+    <Footer locale={currentLocale} />
     <FloatingCTA />
   </body>
 </html>

@@ -1,0 +1,482 @@
+/**
+ * 课程页面翻译
+ * Courses page translations
+ */
+export const courses = {
+  // SEO 元数据
+  seoTitle: {
+    nl: 'Tai Chi Cursussen - Begin Uw Reis',
+    en: 'Tai Chi Courses - Begin Your Journey',
+    zh: '太极课程 - 开启您的和谐之旅',
+  },
+  description: {
+    nl: 'Ontdek onze Tai Chi cursussen voor beginners en gevorderden. Leer 24-vorm, 42-vorm en 108-vorm Tai Chi van ervaren instructeurs.',
+    en: 'Explore our Tai Chi courses for beginners and advanced practitioners. Learn 24-form, 42-form, and 108-form Tai Chi from experienced instructors.',
+    zh: '探索我们的太极课程，适合初学者和进阶练习者。从经验丰富的教练那里学习24式、42式和108式太极。',
+  },
+  title: {
+    nl: 'Tai Chi Cursussen',
+    en: 'Tai Chi Courses',
+    zh: '太极课程',
+  },
+  subtitle: {
+    nl: 'Begin uw reis naar harmonie',
+    en: 'Begin your journey to harmony',
+    zh: '开启您的和谐之旅',
+  },
+  basic: {
+    nl: 'Basis: 24 Vormen',
+    en: 'Basic: 24 Forms',
+    zh: '基础：24式',
+  },
+  intermediate: {
+    nl: 'Intermediate: 42 Vormen',
+    en: 'Intermediate: 42 Forms',
+    zh: '中级：42式',
+  },
+  advanced: {
+    nl: 'Gevorderd: 108 Vormen',
+    en: 'Advanced: 108 Forms',
+    zh: '高级：108式',
+  },
+  private: {
+    nl: 'Privélessen',
+    en: 'Private Lessons',
+    zh: '私教课程',
+  },
+  register: {
+    nl: 'Direct Inschrijven',
+    en: 'Register Now',
+    zh: '立即报名',
+  },
+  // Hero
+  hero: {
+    tag: {
+      nl: 'Professionele Lesgeving',
+      en: 'Professional Teaching',
+      zh: '专业教学',
+    },
+    title: {
+      nl: 'Cursusinschrijving',
+      en: 'Course Registration',
+      zh: '课程报名',
+    },
+    subtitle: {
+      nl: 'Professionele Tai Chi Chuan begeleiding om u te helpen de wijsheid van de harmonie tussen lichaam en geest te beheersen',
+      en: 'Professional Tai Chi Chuan instruction to help you master the wisdom of mind-body harmony',
+      zh: '专业太极拳指导，助您掌握身心和谐之智慧',
+    },
+  },
+  // 课程系统
+  system: {
+    tag: {
+      nl: 'Curculussysteem',
+      en: 'Course System',
+      zh: '课程体系',
+    },
+    title: {
+      nl: 'Onze Cursussen',
+      en: 'Our Courses',
+      zh: '我们的课程',
+    },
+    subtitle: {
+      nl: 'Van basis tot gevorderd, stap voor stap leren, geschikt voor studenten van alle niveaus',
+      en: 'From basics to advanced, step-by-step learning suitable for students of all levels',
+      zh: '从基础到高级，循序渐进，适合各个水平的学员',
+    },
+  },
+  // 课程卡片
+  cards: {
+    beginner: {
+      tag: {
+        nl: 'Beginnerscursus',
+        en: 'Beginner Course',
+        zh: '入门课程',
+      },
+      title: {
+        nl: '24-vorm Tai Chi',
+        en: '24-Form Tai Chi',
+        zh: '24式太极拳',
+      },
+      desc: {
+        nl: 'Geschikt voor beginners zonder ervaring. Start vanaf de basis en leer systematisch de vereenvoudigde 24-vorm Tai Chi, beheers de basis essentials en ademhalingstechnieken.',
+        en: 'Suitable for beginners with zero experience. Start from basics and systematically learn the 24-form simplified Tai Chi, mastering fundamental essentials and breathing techniques.',
+        zh: '适合零基础初学者。从基础开始，系统学习24式简化太极拳，掌握基本要领和呼吸技巧。',
+      },
+      sessions: {
+        nl: '12 lessen',
+        en: '12 classes',
+        zh: '12课时',
+      },
+      duration: {
+        nl: '60 min/les',
+        en: '60 min/class',
+        zh: '60分钟/课时',
+      },
+      difficulty: '⭐⭐',
+    },
+    intermediate: {
+      tag: {
+        nl: 'Voortgezette Cursus',
+        en: 'Intermediate Course',
+        zh: '进阶课程',
+      },
+      title: {
+        nl: '42-vorm Tai Chi',
+        en: '42-Form Tai Chi',
+        zh: '42式太极拳',
+      },
+      desc: {
+        nl: 'Geschikt voor studenten met enige basis. Leer de 42-vorm competitieroutine, integreert kenmerken van meerdere scholen met hogere technische inhoud.',
+        en: 'Suitable for students with some foundation. Learn the 42-form competition routine, integrating characteristics from multiple schools with higher technical content.',
+        zh: '适合有一定基础的学员。学习42式竞赛套路，融合多家流派特色，技术含量更高。',
+      },
+      sessions: {
+        nl: '16 lessen',
+        en: '16 classes',
+        zh: '16课时',
+      },
+      duration: {
+        nl: '90 min/les',
+        en: '90 min/class',
+        zh: '90分钟/课时',
+      },
+      difficulty: '⭐⭐⭐',
+    },
+    advanced: {
+      tag: {
+        nl: 'Gevorderde Cursus',
+        en: 'Advanced Course',
+        zh: '高级课程',
+      },
+      title: {
+        nl: 'Traditionele 108-vorm',
+        en: 'Traditional 108-Form',
+        zh: '传统108式',
+      },
+      desc: {
+        nl: 'Geschikt voor langdurige beoefenaars. Diepe studie van traditionele Yang-stijl 108-vorm, verken de diepe betekenis en interne praktijken van Tai Chi.',
+        en: 'Suitable for long-term practitioners. Deep study of traditional Yang-style 108-form, exploring profound meanings and internal practices of Tai Chi.',
+        zh: '适合长期练习者。深入研究传统杨式108式，探索太极的深层内涵和内功心法。',
+      },
+      sessions: {
+        nl: '24 lessen',
+        en: '24 classes',
+        zh: '24课时',
+      },
+      duration: {
+        nl: '120 min/les',
+        en: '120 min/class',
+        zh: '120分钟/课时',
+      },
+      difficulty: '⭐⭐⭐⭐',
+    },
+    private: {
+      tag: {
+        nl: 'Aangepaste Cursus',
+        en: 'Custom Course',
+        zh: '定制课程',
+      },
+      title: {
+        nl: 'Eén-op-één Privéles',
+        en: 'One-on-One Private',
+        zh: '一对一私教',
+      },
+      desc: {
+        nl: 'Gepersonaliseerde lesplannen op basis van individuele omstandigheden, gerichte oplossingen voor oefenproblemen, snelle verbetering van Tai Chi-vaardigheden.',
+        en: 'Customized teaching plans based on individual conditions, targeted solutions for practice issues, rapid improvement of Tai Chi skills.',
+        zh: '根据个人情况定制教学方案，针对性解决练习问题，快速提升太极拳水平。',
+      },
+      sessions: {
+        nl: 'Flexibel',
+        en: 'Flexible',
+        zh: '灵活安排',
+      },
+      duration: {
+        nl: '60-90 min',
+        en: '60-90 min',
+        zh: '60-90分钟',
+      },
+      difficulty: {
+        nl: 'Aangepast',
+        en: 'Customized',
+        zh: '按需定制',
+      },
+    },
+    labels: {
+      sessions: {
+        nl: 'Sessies',
+        en: 'Sessions',
+        zh: '课时',
+      },
+      duration: {
+        nl: 'Duur',
+        en: 'Duration',
+        zh: '时长',
+      },
+      difficulty: {
+        nl: 'Moeilijkheid',
+        en: 'Difficulty',
+        zh: '难度',
+      },
+    },
+  },
+  // 课程特色
+  features: {
+    tag: {
+      nl: 'Waarom Kiezen Voor Ons',
+      en: 'Why Choose Us',
+      zh: '选择我们',
+    },
+    title: {
+      nl: 'Cursuskenmerken',
+      en: 'Course Features',
+      zh: '课程特色',
+    },
+    items: {
+      professional: {
+        title: {
+          nl: 'Professionele Instructeurs',
+          en: 'Professional Instructors',
+          zh: '专业教练',
+        },
+        desc: {
+          nl: 'Erkende professionele Tai Chi-instructeurs met landelijke coach-certificering',
+          en: 'Experienced professional Tai Chi instructors with nationally certified coaching qualifications',
+          zh: '经验丰富的专业太极拳教练，持有国家级教练资格证书',
+        },
+      },
+      smallClass: {
+        title: {
+          nl: 'Kleine Klasgrootte',
+          en: 'Small Class Size',
+          zh: '小班教学',
+        },
+        desc: {
+          nl: 'Kleine klas lessen zorgen ervoor dat elke student voldoende begeleiding en aandacht krijgt',
+          en: 'Small class teaching ensures every student receives adequate guidance and attention',
+          zh: '小班教学确保每位学员都能得到充分的指导和关注',
+        },
+      },
+      flexible: {
+        title: {
+          nl: 'Flexibele Rooster',
+          en: 'Flexible Schedule',
+          zh: '时间灵活',
+        },
+        desc: {
+          nl: 'Meerdere tijds beschikbaar, doordeweekse en weekendlessen om aan verschillende behoeften te voldoen',
+          en: 'Multiple time slots available, weekday and weekend classes to meet different needs',
+          zh: '多个时间段可选，工作日和周末均有课程，满足不同需求',
+        },
+      },
+      environment: {
+        title: {
+          nl: 'Elegante Omgeving',
+          en: 'Elegant Environment',
+          zh: '环境优雅',
+        },
+        desc: {
+          nl: 'Leslocaties nabij parken met rustige omgeving en frisse lucht, ideaal voor Tai Chi-oefening',
+          en: 'Classrooms near parks with quiet surroundings and fresh air, ideal for Tai Chi practice',
+          zh: '教室位于公园附近，环境清幽空气清新，适合太极拳练习',
+        },
+      },
+    },
+    experienceBadge: {
+      years: {
+        nl: '10+ Jaar',
+        en: '10+ Years',
+        zh: '10+ 年',
+      },
+      text: {
+        nl: 'Leservaring',
+        en: 'Teaching Experience',
+        zh: '教学经验',
+      },
+    },
+  },
+  // 报名区域
+  registration: {
+    tag: {
+      nl: 'Nu Inschrijven',
+      en: 'Register Now',
+      zh: '立即报名',
+    },
+    title: {
+      nl: 'Begin Uw Tai Chi Reis',
+      en: 'Start Your Tai Chi Journey',
+      zh: '开启您的太极之旅',
+    },
+    subtitle: {
+      nl: 'Vul het inschrijfformulier aan de rechterkant in, en onze cursusadviseur neemt binnen 24 uur contact met u op om de meest geschikte cursus aan te bevelen.',
+      en: 'Fill out the registration form on the right, and our course consultant will contact you within 24 hours to recommend the most suitable course.',
+      zh: '填写右侧报名表单，我们的课程顾问将在24小时内与您联系，推荐最合适的课程。',
+    },
+    hours: {
+      nl: '24 uur',
+      en: '24 hours',
+      zh: '24小时',
+    },
+    schedule: {
+      title: {
+        nl: 'Lesrooster',
+        en: 'Class Schedule',
+        zh: '课程时间',
+      },
+      flexTitle: {
+        nl: 'Flexibele Planning',
+        en: 'Flexible Scheduling',
+        zh: '灵活安排',
+      },
+      desc: {
+        nl: 'Na inschrijving stemt onze cursusadviseur met u af om de meest geschikte lestijden te bepalen op basis van uw behoeften en beschikbaarheid. Wij bieden meerdere tijds, inclusief doordeweekse dagen en weekenden.',
+        en: 'After registration, our course consultant will coordinate with you to determine the most suitable class times based on your needs and availability. We offer multiple time slots, including weekdays and weekends.',
+        zh: '报名后，我们的课程顾问会根据您的需求和可用时间与您协调确定最合适的上课时间。我们提供多个时间段，包括工作日和周末。',
+      },
+    },
+    pricing: {
+      title: {
+        nl: 'Cursuskosten',
+        en: 'Course Fees',
+        zh: '课程费用',
+      },
+      flexTitle: {
+        nl: 'Aangepaste Prijzen',
+        en: 'Customized Pricing',
+        zh: '按需定价',
+      },
+      desc: {
+        nl: 'Cursuskosten worden bepaald op basis van cursustype, aantal sessies en andere factoren. Na inschrijving zal onze adviseur gedetailleerde prijsinformatie verstrekken en het meest geschikte cursuspakket voor u aanbevelen.',
+        en: 'Course fees are determined based on the course type, number of sessions, and other factors. After registration, our consultant will provide detailed pricing information and recommend the most suitable course package for you.',
+        zh: '课程费用根据课程类型、课时长短等因素确定。报名后，我们的顾问将提供详细的收费信息并为您推荐最合适的课程套餐。',
+      },
+    },
+    contact: {
+      title: {
+        nl: 'Contact Email',
+        en: 'Contact Email',
+        zh: '联系邮箱',
+      },
+      email: 'lilytao0607@outlook.com',
+      emailLabel: {
+        nl: 'E-mail:',
+        en: 'Email:',
+        zh: '邮箱：',
+      },
+    },
+  },
+  // FAQ
+  faq: {
+    tag: 'FAQ',
+    title: {
+      nl: 'Veelgestelde Vragen',
+      en: 'Frequently Asked Questions',
+      zh: '常见问题',
+    },
+    q1: {
+      question: {
+        nl: 'Ik heb geen ervaring. Kan ik Tai Chi leren?',
+        en: 'I have zero experience. Can I learn Tai Chi?',
+        zh: '我没有任何基础，可以学太极拳吗？',
+      },
+      answer: {
+        nl: 'Absoluut! Onze 24-vorm beginnerscursus is speciaal ontworpen voor studenten zonder ervaring. Instructeurs starten vanaf de meest basis houdingen en voetwerk, geleidelijk aan vooruitgang om ervoor te zorgen dat elke student kan bijhouden. Tai Chi bewegingen zijn zacht en langzaam, geschikt voor mensen van elke leeftijd en fitnessniveau.',
+        en: "Absolutely! Our 24-form beginner course is specifically designed for students with zero experience. Instructors start from the most basic stances and footwork, progressing gradually to ensure every student can keep up. Tai Chi movements are gentle and slow, suitable for people of any age and fitness level.",
+        zh: '完全可以！我们的24式入门课程专为零基础学员设计。教练从最基础的站姿、步法开始教学，循序渐进，确保每位学员都能跟上进度。太极拳动作柔和缓慢，适合任何年龄和体能水平的人练习。',
+      },
+    },
+    q2: {
+      question: {
+        nl: 'Welke apparatuur heb ik nodig voor de cursus?',
+        en: 'What equipment do I need for the course?',
+        zh: '上课需要什么装备？',
+      },
+      answer: {
+        nl: 'We raden aan om losse, comfortabele sportkleding en sportschoenen te dragen. Wij bieden professionele Tai Chi oefenkleding te koop aan, maar deze is niet vereist. Het belangrijkste is om kleding te dragen die gemakkelijk beweging mogelijk maakt. Dames wordt geadviseerd om geen rokken te dragen. Ook raden we aan om uw eigen waterfles mee te nemen om gehydrateerd te blijven tijdens het oefenen.',
+        en: "We recommend wearing loose, comfortable sportswear and athletic shoes. We provide professional Tai Chi practice uniforms for purchase, but they're not required. The most important thing is to wear clothes that allow easy movement. Ladies should avoid wearing skirts. Also, we recommend bringing your own water bottle to stay hydrated during practice.",
+        zh: '我们建议穿着宽松舒适的运动服和运动鞋。我们提供专业的太极练功服供购买，但不是必需的。最重要的是穿着便于活动的衣服。女士建议不要穿裙子。另外，建议自带水杯，保持练习时的水分补给。',
+      },
+    },
+    q3: {
+      question: {
+        nl: 'Wat als ik de cursus niet in één term kan beheersen?',
+        en: 'What if I cannot master the course in one term?',
+        zh: '如果一个学期学不会怎么办？',
+      },
+      answer: {
+        nl: 'Maak u geen zorgen! Ons cursusontwerp houdt rekening met de leervoortgang van de meeste mensen. Als u meer oefening nodig heeft na het voltooien van één term, kunt u dezelfde cursus opnieuw volgen in een nieuwe term (met vooraf reserveren).',
+        en: "Don't worry! Our course design takes most people's learning progress into account. If you need more practice after completing one term, you can repeat the same level course in a new term (with advance booking).",
+        zh: '别担心！我们的课程设计考虑了大多数人的学习进度。如果您完成一个学期后还需要更多练习，可以在新学期重复同等级课程（需提前预约）。',
+      },
+    },
+    q4: {
+      question: {
+        nl: 'Is er een leeftijdsgrens?',
+        en: 'Is there an age limit?',
+        zh: '有年龄限制吗？',
+      },
+      answer: {
+        nl: 'Tai Chi is een sport geschikt voor alle leeftijden. Onze studenten variëren van 18 tot meer dan 70 jaar oud. Voor tieners (12-18 jaar) raden we ouderlijke begeleiding aan of deelname aan gespecialiseerde jeugd Tai Chi-lessen. Zolang u gezond bent en in staat tot matige lichaamsbeweging, kunt u Tai Chi leren.',
+        en: "Tai Chi is a sport suitable for all ages. Our students range from 18 to over 70 years old. For teenagers (12-18 years), we recommend parental accompaniment or joining specialized youth Tai Chi classes. As long as you're healthy and capable of moderate exercise, you can learn Tai Chi.",
+        zh: '太极拳是一项适合所有年龄的运动。我们的学员从18岁到70多岁都有。对于青少年（12-18岁），我们建议家长陪同或参加专门的青少年太极拳课程。只要身体健康、能够进行适度运动，都可以学习太极拳。',
+      },
+    },
+  },
+  // CTA
+  cta: {
+    title: {
+      nl: 'Nu Inschrijven, Begin Uw Gezonde Leven',
+      en: 'Register Now, Start Your Healthy Life',
+      zh: '立即报名，开启健康生活',
+    },
+    subtitle: {
+      nl: 'Vul het formulier in, en wij nemen spoedig contact met u op',
+      en: 'Fill out the form, and we will contact you soon',
+      zh: '填写表单，我们将尽快与您联系',
+    },
+    button: {
+      nl: 'Nu Inschrijven',
+      en: 'Register Now',
+      zh: '立即报名',
+    },
+  },
+  // 表单
+  form: {
+    title: {
+      nl: 'Inschrijfformulier',
+      en: 'Registration Form',
+      zh: '报名表单',
+    },
+    name: {
+      nl: 'Naam',
+      en: 'Name',
+      zh: '姓名',
+    },
+    email: {
+      nl: 'E-mail',
+      en: 'Email',
+      zh: '邮箱',
+    },
+    phone: {
+      nl: 'Telefoon',
+      en: 'Phone',
+      zh: '电话',
+    },
+    course: {
+      nl: 'Kies Cursus',
+      en: 'Select Course',
+      zh: '选择课程',
+    },
+    message: {
+      nl: 'Bericht',
+      en: 'Message',
+      zh: '留言',
+    },
+    submit: {
+      nl: 'Indienen',
+      en: 'Submit',
+      zh: '提交',
+    },
+  },
+};
