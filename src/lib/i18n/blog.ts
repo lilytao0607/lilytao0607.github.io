@@ -61,7 +61,7 @@ export const blog = {
         },
         emoji: '👩',
         color: 'accent',
-        image: '/image/tai-chi-park.jpg',
+        image: '/image/tai-chi-standing.jpg',
         quote: {
           nl: 'Ik begon 2 jaar geleden met Tai Chi, aanvankelijk alleen om nekproblemen door langdurig bureauwerk te verbeteren. Onverwacht verbeterde niet alleen mijn nekpijn, maar onderging ook mijn mentale toestand significante veranderingen. Nu is dagelijks Tai Chi beoefenen een onmisbaar deel van mijn leven geworden.',
           en: "I started learning Tai Chi two years ago, initially just to improve the neck problems caused by long-term desk work. Unexpectedly, not only was my neck pain relieved, but my mental state also underwent significant changes. Now practicing Tai Chi every morning has become an indispensable part of my life.",
@@ -107,7 +107,7 @@ export const blog = {
         },
         emoji: '👨',
         color: 'cyan',
-        image: '/image/tai-chi-standing.jpg',
+        image: '/image/tai-chi-park.jpg',
         quote: {
           nl: 'Na mijn pensioen voelde ik dat mijn leven zijn focus had verloren. Ik kwam toevallig Tai Chi tegen en vond een nieuwe richting in het leven. Van 24-vorm naar 42-vorm, naar nu 108-vorm, elke vooruitgang was een sublimatie van lichaam en geest. Tai Chi heeft me niet alleen fysiek gezond gehouden, maar me ook geholpen innerlijke rust te vinden.',
           en: "After retirement, I felt my life had lost its focus. I came across Tai Chi by chance and found a new direction in life. From 24-form to 42-form, to now 108-form, each advancement has been a sublimation of body and mind. Tai Chi has not only kept me physically healthy but also helped me find inner peace.",

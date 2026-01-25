@@ -159,68 +159,76 @@ const gt = getTranslations('global', currentLocale);
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="space-y-6">
-          {t.practice.items.map((item, index) => (
-            <div class="scroll-animate h-full flex flex-col" style={`animation-delay: ${index * 0.1}s`}>
-              <div class={`bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-${item.color}/50 transition-all duration-300 flex-1 flex flex-col`}>
-                <div class="flex items-start space-x-6 flex-1">
-                  <div class={`w-16 h-16 bg-${item.color}/10 rounded-full flex items-center justify-center flex-shrink-0`}>
-                    <span class={`text-2xl font-serif text-${item.color} font-bold`}>{item.num}</span>
-                  </div>
-                  <div class="flex-1">
-                    <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                      {item.title}
-                    </h3>
-                    <p class="text-secondary leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+      <!-- Practice Points Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {t.practice.items.map((item, index) => (
+          <div class="scroll-animate h-full flex flex-col" style={`animation-delay: ${index * 0.08}s`}>
+            <div class={`bg-paper rounded-2xl shadow-lg hover:shadow-xl p-6 border border-border/30 hover:border-${item.color}/50 transition-all duration-300 h-full flex flex-col`}>
+              <!-- Number Badge -->
+              <div class="mb-4">
+                <div class={`w-12 h-12 bg-${item.color}/10 rounded-full flex items-center justify-center`}>
+                  <span class={`text-xl font-serif text-${item.color} font-bold`}>{item.num}</span>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
 
-        <div class="scroll-animate h-full flex flex-col" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
-            <div class="mb-8">
-              <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-                {t.faq.title}
+              <!-- Title -->
+              <h3 class="text-xl font-serif font-bold text-ink mb-3">
+                {item.title}
               </h3>
-              <div class="w-16 h-1 bg-accent/50"></div>
-            </div>
 
-            <div class="space-y-6">
-              {t.faq.questions.map((q, index) => (
-                <div class="border-b border-border/30 pb-6">
-                  <div class="flex items-start space-x-3 mb-3">
-                    <span class="text-accent text-xl">❓</span>
-                    <h4 class="text-lg font-serif font-bold text-ink">
-                      {q.question}
-                    </h4>
-                  </div>
-                  <p class="text-secondary leading-relaxed text-sm mb-4">
-                    {q.answer}
-                  </p>
-                  <!-- Image for stability question (index 1) -->
-                  {index === 1 && (
-                    <div class="mt-4">
-                      <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <img
-                          src="/image/taichi-practice.jpg"
-                          alt="Tai Chi Practice - Stability Training"
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <p class="text-xs text-secondary mt-2 text-center">
-                        {currentLocale === 'zh' ? '站桩练习 - 培养根基' : currentLocale === 'nl' ? 'Stance Practice - Building Foundation' : 'Stance Practice - Building Foundation'}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
+              <!-- Description -->
+              <p class="text-secondary leading-relaxed text-sm flex-1">
+                {item.desc}
+              </p>
+
+              <!-- Color Accent Line -->
+              <div class={`mt-4 pt-4 border-t border-${item.color}/20`}>
+                <div class={`w-12 h-0.5 bg-${item.color}/50`}></div>
+              </div>
             </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="scroll-animate" style="animation-delay: 0.3s">
+        <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30">
+          <div class="mb-8">
+            <h3 class="text-3xl font-serif font-bold text-ink mb-4">
+              {t.faq.title}
+            </h3>
+            <div class="w-16 h-1 bg-accent/50"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {t.faq.questions.map((q, index) => (
+              <div class="border-b border-border/30 pb-6 last:border-0">
+                <div class="flex items-start space-x-3 mb-3">
+                  <span class="text-accent text-xl flex-shrink-0">❓</span>
+                  <h4 class="text-lg font-serif font-bold text-ink">
+                    {q.question}
+                  </h4>
+                </div>
+                <p class="text-secondary leading-relaxed text-sm mb-4 pl-8">
+                  {q.answer}
+                </p>
+                <!-- Image for stability question (index 1) -->
+                {index === 1 && (
+                  <div class="mt-4 pl-8">
+                    <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
+                      <img
+                        src="/image/taichi-practice.jpg"
+                        alt="Tai Chi Practice - Stability Training"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-xs text-secondary mt-2 text-center">
+                      {currentLocale === 'zh' ? '站桩练习 - 培养根基' : currentLocale === 'nl' ? 'Stance Practice - Building Foundation' : 'Stance Practice - Building Foundation'}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
