@@ -44,8 +44,8 @@ const quoteCards = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
       <div class="relative mb-12 animate-fade-in">
         <div class="absolute inset-0 -z-10 flex items-center justify-center">
-          <div class="w-[120%] h-[120%] rounded-full border border-accent/20 animate-[spin_60s_linear_infinite]"></div>
-          <div class="absolute w-[140%] h-[140%] rounded-full border border-cyan/10 animate-[spin_80s_linear_infinite_reverse]"></div>
+          <div class="decorative-ring ring-outer w-[120%] h-[120%] rounded-full border border-accent/20"></div>
+          <div class="absolute decorative-ring ring-inner w-[140%] h-[140%] rounded-full border border-cyan/10"></div>
         </div>
 
         <img
@@ -53,7 +53,7 @@ const quoteCards = [
           alt="Tai Chi"
           width={400}
           height={400}
-          class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
+          class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl taiji-float-spin"
         />
       </div>
 
@@ -163,7 +163,7 @@ const quoteCards = [
                         alt="Tai Chi"
                         width={300}
                         height={300}
-                        class="w-56 h-56 object-contain drop-shadow-xl animate-[spin_30s_linear_infinite]"
+                        class="w-56 h-56 object-contain drop-shadow-xl taiji-spin-slow"
                       />
                     </div>
                   </div>
@@ -362,5 +362,69 @@ const quoteCards = [
 
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
+  }
+
+  /* 装饰圆环旋转动画 */
+  @keyframes spin-outer {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-inner-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .decorative-ring.ring-outer {
+    animation: spin-outer 60s linear infinite;
+  }
+
+  .decorative-ring.ring-inner {
+    animation: spin-inner-reverse 80s linear infinite;
+  }
+
+  /* 太极慢速旋转动画 */
+  @keyframes taiji-spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .taiji-spin-slow {
+    animation: taiji-spin-slow 30s linear infinite;
+  }
+
+  /* 太极同时浮动和旋转的动画 */
+  @keyframes taiji-float-spin {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-20px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(0px) rotate(180deg);
+    }
+    75% {
+      transform: translateY(-20px) rotate(270deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(360deg);
+    }
+  }
+
+  .taiji-float-spin {
+    animation: taiji-float-spin 12s ease-in-out infinite;
   }
 </style>

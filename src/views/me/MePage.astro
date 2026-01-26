@@ -209,7 +209,7 @@ const gt = getTranslations('global', currentLocale);
             <img
               src="/image/taichi-logo.png"
               alt="Tai Chi"
-              class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
+              class="w-full h-full object-contain taiji-spin-slow"
             />
           </div>
         </div>
@@ -289,5 +289,19 @@ const gt = getTranslations('global', currentLocale);
 
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
+  }
+
+  /* 太极慢速旋转动画 */
+  @keyframes taiji-spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .taiji-spin-slow {
+    animation: taiji-spin-slow 30s linear infinite;
   }
 </style>
