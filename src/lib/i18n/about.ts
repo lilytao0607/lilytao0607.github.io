@@ -75,7 +75,7 @@ export const about = {
       {
         nl: '🌿 De gemeenschappelijke wortel van alle stijlen',
         en: '🌿 The common root of all styles',
-        zh: '⛰️ 所有流派的共同根',
+        zh: '🌿 所有流派的共同根源',
       },
     ],
   },

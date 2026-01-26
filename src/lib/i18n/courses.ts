@@ -62,8 +62,8 @@ export const courses = {
       zh: '课程报名',
     },
     subtitle: {
-      nl: 'Professionele Tai Chi Chuan begeleiding om u te helpen de wijsheid van de harmonie tussen lichaam en geest te beheersen',
-      en: 'Professional Tai Chi Chuan instruction to help you master the wisdom of mind-body harmony',
+      nl: 'Professionele Tai Chi Chuan begeleiding om u te helpen de wijsheid van lichaam-geest harmonie te beheersen',
+      en: 'Professional Tai Chi Chuan guidance to help you master the wisdom of mind-body harmony',
       zh: '专业太极拳指导，助您掌握身心和谐之智慧',
     },
   },
@@ -132,8 +132,8 @@ export const courses = {
         zh: '中级太极课程',
       },
       desc: {
-        nl: 'Geschikt voor studenten met enige basis. Verdiep uw techniek met meer geavanceerde bewegingen en flows, integreert kenmerken van meerdere scholen met hogere technische inhoud.',
-        en: 'Suitable for students with some foundation. Deepen your technique with more advanced movements and flows, integrating characteristics from multiple schools with higher technical content.',
+        nl: 'Geschikt voor studenten met enige basis. Diepe studie van complexere bewegingen en routines, integreren van kenmerken van meerdere stijlen, met hogere technische inhoud.',
+        en: 'Suitable for students with some foundation. In-depth study of more complex movements and routines, integrating characteristics from multiple schools, with higher technical content.',
         zh: '适合有一定基础的学员。深入学习更复杂的动作和套路，融合多家流派特色，技术含量更高。',
       },
       sessions: {
@@ -271,7 +271,7 @@ export const courses = {
     workshop: {
       nl: 'Workshops worden aangekondigd op basis van verschillende tijden en locaties',
       en: 'Workshops will be announced based on different times and locations',
-      zh: 'Workshop会根据不同时间地点等进行通知',
+      zh: 'Workshop会根据不同时间和地点进行通知',
     },
   },
   // 课程特色

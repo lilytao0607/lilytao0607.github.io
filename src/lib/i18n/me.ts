@@ -39,7 +39,7 @@ export const me = {
     credentials: {
       nl: 'Discipel van Meester He Shaojun | 18 jaar Tai Chi beoefening | Toegewijd aan spirituele cultivatiepad',
       en: 'Disciple of Master He Shaojun | 18 years Tai Chi practice | Dedicated to spiritual cultivation path',
-      zh: '何少林弟子 | 18年太极习练 | 致力于修身养性之道',
+      zh: '何绍君弟子 | 18年太极习练 | 致力于修身养性之道',
     },
     badge: {
       years: '18+',
@@ -60,16 +60,16 @@ export const me = {
     title: {
       nl: 'Discipel van Meester He Shaojun',
       en: 'Disciple of Master He Shaojun',
-      zh: '何少林弟子',
+      zh: '何绍君弟子',
     },
     p1: {
-      nl: 'In <span class="text-accent font-medium">2008</span> begon Lily Tao te studeren onder Meester He Shaojun. Na <span class="text-accent font-medium">3 jaar</span> van begeleiding en training, werd ze in <span class="text-accent font-medium">2011</span> officieel aangenomen als discipel in de lijn van Meester He Shaojun.',
-      en: 'In <span class="text-accent font-medium">2008</span>, Lily Tao began studying under Master He Shaojun. After <span class="text-accent font-medium">3 years</span> of guidance and training, she was officially accepted as a disciple in <span class="text-accent font-medium">2011</span> into the lineage of Master He Shaojun.',
+      nl: 'In <span class="text-accent font-medium">2008</span> begon Lily Tao te studeren onder Meester He Shaojun. Na <span class="text-accent font-medium">3 jaar</span> van observatie en begeleiding, slaagde ze eindelijk voor de meesters examen en werd ze in <span class="text-accent font-medium">2011</span> officieel opgenomen in de lijn van Meester He Shaojun.',
+      en: 'In <span class="text-accent font-medium">2008</span>, Lily Tao began studying under Master He Shaojun. After <span class="text-accent font-medium">3 years</span> of observation and guidance, she finally passed the master\'s examination and was officially accepted into the lineage of Master He Shaojun in <span class="text-accent font-medium">2011</span>.',
       zh: '在<span class="text-accent font-medium">2008年</span>跟随何绍君师父学习，经过<span class="text-accent font-medium">3年</span>的考察，终于通过了师父的考察，于<span class="text-accent font-medium">2011年</span>正式排入何绍君大师门下。',
     },
     p2: {
-      nl: 'Volgend de geest van haar meester, behandelt ze Tai Chi als een pad van spirituele cultivatie en ziet verspreiding als haar missie. Ze leert nu traditionele Yang Style Tai Chi in Nederland en wordt geliefd door Europese studenten.',
-      en: "Following her master's spirit, she treats Tai Chi as a path of spiritual cultivation and sees dissemination as her mission. She now teaches traditional Yang Style Tai Chi in Netherlands and is beloved by European students.",
+      nl: 'Volgend de geest van haar meester, beschouwt ze Tai Chi als een weg tot zelfveredeling en ziet verspreiding als haar missie. Ze geeft nu les in traditionele Yang Style Tai Chi in Nederland en wordt zeer gewaardeerd door Europese studenten.',
+      en: 'Following her master\'s spirit, she regards Tai Chi as a path of self-cultivation and sees dissemination as her mission. She now teaches traditional Yang Style Tai Chi in the Netherlands and is highly valued by European students.',
       zh: '秉承师父精神，她将太极视为修身养性的道路，将传播视为使命。现在在荷兰教授传统杨式太极拳，深受欧洲学员喜爱。',
     },
     p3: {
@@ -81,7 +81,7 @@ export const me = {
       {
         nl: '🎯 Interne Discipel van Meester He Shaojun',
         en: '🎯 Inner Disciple of Master He Shaojun',
-        zh: '🎯 何少林内弟子',
+        zh: '🎯 何绍君内弟子',
       },
       {
         nl: '📚 Traditionele Yang Style Tai Chi',
@@ -110,12 +110,12 @@ export const me = {
     subtitle: {
       nl: 'Focus van Meester He Shaojun × Instructeur Tao',
       en: 'Focus of Master He Shaojun × Instructor Tao',
-      zh: '何少军师父 × 陶教练 专注',
+      zh: '何绍君师父 × 陶教练 专注',
     },
     quote: {
-      nl: '"Oefenen van Tai Chi vormen is slechts de buitenkant. Echte vaardigheid ligt in basisvaardigheden. Zonder basisvaardigheden zijn alle vormen, push hands en toepassingen als een huis zonder fundament."',
-      en: '"Practicing Tai Chi forms is only the exterior. Real skill lies in basic skills. Without basic skills, all forms, push hands, and applications are like a house without foundation."',
-      zh: '"练太极拳架只是外表，真功夫在基本功。没有基本功，一切套路、推手、散手都如同空中楼阁。"',
+      nl: '"Tai Chi vormen zijn geen verzameling van bewegingen, maar een synthese van basisvaardigheden in beweging. Zonder basisvaardigheden zijn alle vormen, push hands en vrije toepassingen zoals een kasteel in de lucht."',
+      en: '"Tai Chi forms are not a collection of movements, but a comprehensive manifestation of basic skills in motion. Without basic skills, all forms, push hands, and free applications are like castles in the air."',
+      zh: '"拳架不是动作集合，而是基本功在动态中的综合呈现。没有基本功，一切套路、推手、散手都如同空中楼阁。"',
     },
     quoteLabel: {
       nl: "Meester's Woorden",
@@ -123,9 +123,9 @@ export const me = {
       zh: '师父语录',
     },
     description: {
-      nl: 'In decennia van onderwijservaring wereldwijd benadrukt Meester He Shaojun altijd het belang van basisvaardigheden. Instructeur Tao erfde deze filosofie in Nederland en voert strikt de meesters op, beschouwt "basisvaardigheidstraining" als het belangrijkste, meest fundamentele en onmisbare kerninhoud van de cursussen.',
-      en: "In decades of teaching experience worldwide, Master He Shaojun always emphasizes the importance of basic skills. Instructor Tao inherits this philosophy in Netherlands and strictly implements the master's order, considering \"basic skill training\" as the most important, most fundamental, and indispensable core content of the courses.",
-      zh: '何少军师父在数十年的海内外教学中始终强调基本功的重要性。陶教练在荷兰继承这一理念，严格执行师命，将"基本功训练"作为课程中最重要、最基础、不可或缺的核心内容。',
+      nl: 'In decennia van onderwijs in binnen- en buitenland benadrukt Meester He Shaojun altijd het belang van basisvaardigheden. Instructeur Tao erfde deze filosofie in Nederland en voert de meesters opdracht strikt uit, beschouwende "basisvaardigheidstraining" als het belangrijkste, meest fundamentele en onmisbare kerninhoud van de cursussen.',
+      en: 'In decades of teaching experience both domestically and internationally, Master He Shaojun always emphasizes the importance of basic skills. Instructor Tao inherits this philosophy in the Netherlands and strictly carries out the master\'s order, regarding "basic skill training" as the most important, most fundamental, and indispensable core content of the courses.',
+      zh: '何绍君师父在数十年的海内外教学中始终强调基本功的重要性。陶教练在荷兰继承这一理念，严格执行师命，将"基本功训练"作为课程中最重要、最基础、不可或缺的核心内容。',
     },
   },
   // 基本功体系
@@ -155,13 +155,13 @@ export const me = {
           zh: '站桩（站式）',
         },
         detail: {
-          nl: 'De wortel van het hele syste',
+          nl: 'De wortel van het hele systeem',
           en: 'The root of the entire system',
           zh: '整套体系的根基',
         },
         desc: {
           nl: 'Cultiveert Song (Ontspanning) - Jing (Stilte) - Wen (Stabiliteit)',
-          en: 'Cultivates Song (Relaxation) - Jing (Stillness) - Wen (Stability)',
+          en: 'Cultivates Song (Relaxation) - Jing (Stillness) - Wen (Steadiness)',
           zh: '培养松（放松）-静（宁静）-稳（稳健）',
         },
       },
@@ -179,8 +179,8 @@ export const me = {
           zh: '劲力的"发动机"',
         },
         desc: {
-          nl: 'Ontspannen van taille en heupen, rounding kruis, natuurlijk zwaartepunt',
-          en: 'Relaxing waist and hips, rounding crotch, natural center of gravity',
+          nl: 'Ontspannen van taille en heupen, ronding van het kruis, natuurlijk zwaartepunt',
+          en: 'Relaxing waist and hips, rounding the crotch, natural center of gravity',
           zh: '放松腰胯，圆裆，自然重心',
         },
       },
@@ -314,7 +314,7 @@ export const me = {
     p1: {
       nl: 'Zes generaties Yang Style Tai Chi erfgoed, door Meester He Shaojun naar het buitenland, voortgezet door Lily Tao in Nederland.',
       en: 'Six generations of Yang Style Tai Chi heritage, through Master He Shaojun to overseas, continued by Lily Tao in Netherlands.',
-      zh: '杨氏太极拳六代传承，从何少军师父到海外，由陶莉在荷兰延续。',
+      zh: '杨氏太极拳六代传承，从何绍君师父到海外，由陶莉在荷兰延续。',
     },
     p2: {
       nl: 'Basisvaardigheden zijn de wortel van Tai Chi.<br />Wortel stabiel, dan takken bloeien.<br />Wortel diep, dan Tai Chi echt lichaam en geest binnenkomt.',

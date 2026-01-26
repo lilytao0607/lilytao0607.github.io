@@ -242,7 +242,7 @@ export const blog = {
         },
         desc: {
           nl: 'Leerlingen rapporteren verlichting van stress en angst, verbeterde slaapkwaliteit, en een vredeliger en positiever mindset',
-          en: "Students普遍 report relief from stress and anxiety, improved sleep quality, and a more peaceful and positive mindset",
+          en: 'Students generally report relief from stress and anxiety, improved sleep quality, and a more peaceful and positive mindset',
           zh: '学员普遍报告压力和焦虑缓解，睡眠质量改善，心态更加平和积极',
         },
         emoji: '🧘',
@@ -256,7 +256,7 @@ export const blog = {
         },
         desc: {
           nl: 'Ontmoette een groep gelijkgestemde vrienden, vormde een warme en ondersteunende Tai Chi gemeenschap voor wederzijds leren en vooruitgang',
-          en: "Met a group of like-minded friends, forming a warm and supportive Tai Chi community for mutual learning and progress",
+          en: 'Met a group of like-minded friends, forming a warm and supportive Tai Chi community for mutual learning and progress',
           zh: '结识了一群志同道合的朋友，形成了温暖互助的太极社群，相互学习、共同进步',
         },
         emoji: '👥',
@@ -270,7 +270,7 @@ export const blog = {
         },
         desc: {
           nl: 'Ontwikkelde gezonde levensstijl gewoonten, regelmatigere routines, en dieper begrip van traditionele cultuur',
-          en: "Developed healthy lifestyle habits, more regular routines, and deeper understanding of traditional culture",
+          en: 'Developed healthy lifestyle habits, more regular routines, and a deeper understanding of traditional culture',
           zh: '养成了健康的生活习惯，作息更规律，对传统文化有了更深的理解',
         },
         emoji: '🎯',

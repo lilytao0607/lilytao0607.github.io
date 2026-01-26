@@ -212,21 +212,6 @@ const gt = getTranslations('global', currentLocale);
                 <p class="text-secondary leading-relaxed text-sm mb-4 pl-8">
                   {q.answer}
                 </p>
-                <!-- Image for stability question (index 1) -->
-                {index === 1 && (
-                  <div class="mt-4 pl-8">
-                    <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
-                      <img
-                        src="/image/taichi-practice.jpg"
-                        alt="Tai Chi Practice - Stability Training"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <p class="text-xs text-secondary mt-2 text-center">
-                      {currentLocale === 'zh' ? '站桩练习 - 培养根基' : currentLocale === 'nl' ? 'Stance Practice - Building Foundation' : 'Stance Practice - Building Foundation'}
-                    </p>
-                  </div>
-                )}
               </div>
             ))}
           </div>

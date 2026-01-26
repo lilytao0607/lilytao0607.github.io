@@ -163,9 +163,9 @@ const translations = {
     noMessage: 'Geen',
     fromName: 'Tai Chi Cultuur website',
     courses: {
-      beginner: '24-vorm Tai Chi beginnerscursus',
-      intermediate: '42-vorm Tai Chi voortgezette cursus',
-      advanced: 'Traditionele 108-vorm studiegroep',
+      beginner: 'Tai Chi beginnerscursus',
+      intermediate: 'Tai Chi voortgezette cursus',
+      advanced: 'Tai Chi gevorderde cursus',
       private: 'Eén-op-één privéles'
     }
   },
@@ -191,9 +191,9 @@ const translations = {
     noMessage: 'None',
     fromName: 'Tai Chi Culture website',
     courses: {
-      beginner: '24-Form Tai Chi Beginner Course',
-      intermediate: '42-Form Tai Chi Intermediate Course',
-      advanced: 'Traditional 108-Form Advanced Course',
+      beginner: 'Tai Chi Beginner Course',
+      intermediate: 'Tai Chi Intermediate Course',
+      advanced: 'Tai Chi Advanced Course',
       private: 'One-on-One Private Lesson'
     }
   },
@@ -219,9 +219,9 @@ const translations = {
     noMessage: '无',
     fromName: '太极文化官网',
     courses: {
-      beginner: '24式太极拳入门班',
-      intermediate: '42式太极拳进阶班',
-      advanced: '传统108式研修班',
+      beginner: '太极拳初级课程',
+      intermediate: '太极拳中级课程',
+      advanced: '太极拳高级课程',
       private: '一对一私教课程'
     }
   }
